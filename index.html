@@ -472,7 +472,7 @@
                 <p>I'm so excited to celebrate Valentine's Day with you, my Onyenwem!</p>
                 <p>Check your WhatsApp for my reply!</p>
                 
-                <a href="https://wa.me/+1234567890?text=Hi%20my%20love,%20I%20just%20responded%20to%20your%20Valentine's%20proposal!" class="whatsapp-link" target="_blank" id="whatsappDirectLink">
+                <a href="https://wa.me/+27680079760?text=Hi%20my%20love,%20I%20just%20responded%20to%20your%20Valentine's%20proposal!" class="whatsapp-link" target="_blank" id="whatsappDirectLink">
                     <i class="fab fa-whatsapp"></i> Open WhatsApp to Chat
                 </a>
                 
@@ -510,10 +510,6 @@
         const whatsappForm = document.getElementById('whatsappForm');
         const whatsappDirectLink = document.getElementById('whatsappDirectLink');
         
-        // IMPORTANT: Replace this with YOUR actual phone number
-        // Format: country code + phone number (without +, 0, or spaces)
-        // Example: For US number +1 (555) 123-4567, use "15551234567"
-        const YOUR_PHONE_NUMBER = "27680779760"; // CHANGE THIS
         
         // Show response form when YES button is clicked
         yesBtn.addEventListener('click', function() {
@@ -652,14 +648,7 @@
             }, 1000);
         });
         
-        // Alert for phone number setup
-        window.addEventListener('load', function() {
-            if (YOUR_PHONE_NUMBER === "27680779760") {
-                setTimeout(() => {
-                    alert("IMPORTANT: To make the WhatsApp feature work, you need to replace 'YOUR_PHONE_NUMBER_HERE' on line 330 with your actual phone number in international format (without +, 0, or spaces). Example: 15551234567");
-                }, 1000);
-            }
-        });
+       
     </script>
 </body>
 </html>
