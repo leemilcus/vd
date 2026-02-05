@@ -166,6 +166,634 @@
         }
         
         .yes-btn {
+            background: linear-gradient(to right, #25D366, #128C7E);
+            color: white;
+        }
+        
+        .yes-btn:hover {
+            background: linear-gradient(to right, #128C7E, #25D366);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .no-btn {
+            background: linear-gradient(to right, #cccccc, #999999);
+            color: white;
+        }
+        
+        .no-btn:hover {
+            background: linear-gradient(to right, #999999, #666666);
+            transform: translateY(-5px);
+        }
+        
+        .response-form {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+            margin: 30px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, #dcf8c6, #fff);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 3px solid #25D366;
+        }
+        
+        .response-form h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #075E54;
+        }
+        
+        .whatsapp-icon {
+            display: block;
+            text-align: center;
+            font-size: 3rem;
+            color: #25D366;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #075E54;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: white;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #25D366;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(to right, #25D366, #128C7E);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(to right, #128C7E, #25D366);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(37, 211, 102, 0.4);
+        }
+        
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #dcf8c6, #fff);
+            border-radius: 15px;
+            margin-top: 30px;
+            animation: fadeIn 1s;
+            border: 3px solid #25D366;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .confirmation-message h2 {
+            font-size: 2.8rem;
+            color: #075E54;
+            margin-bottom: 20px;
+        }
+        
+        .confirmation-message p {
+            font-size: 1.5rem;
+            color: #128C7E;
+            margin-bottom: 20px;
+        }
+        
+        .whatsapp-link {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-link:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        
+        .photo-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background-color: #ffcce0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #ff4d8d;
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2rem;
+            color: #800033;
+            font-style: italic;
+        }
+        
+        .heart-icon {
+            color: #ff0066;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .ayanda-name {
+                font-size: 3rem;
+            }
+            
+            .valentine-question {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 15px 30px;
+                font-size: 1.5rem;
+            }
+            
+            .photo-frame {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .response-form {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="hearts" id="hearts-container"></div>
+            <h1>Will You Be My Valentine?</h1>
+            <div class="subtitle">A special question for someone very special</div>
+        </header>
+        
+        <main class="main-content">
+            <div class="ayanda-name">Ayanda</div>
+            
+            <div class="nickname">My Moochie, My Onyenwem</div>
+            
+            <div class="message-box">
+                <p>My dearest Ayanda,</p>
+                <p>From the moment you came into my life, everything has felt more beautiful, more meaningful, and more joyful. You are the light that brightens my darkest days and the warmth that fills my heart with happiness.</p>
+                <p>You are not just my girlfriend, you are my <span class="highlight">Moochie</span>, my <span class="highlight">Onyenwem</span> - my beautiful one. Every moment with you is a treasure, and every memory we create is priceless.</p>
+                <p>This Valentine's Day, I want to make it official. I want to celebrate this day of love with you, not just as any couple, but as <span class="highlight">Ayanda and her Valentine</span>.</p>
+                <p style="text-align: center; font-weight: bold; margin-top: 25px; color: #ff0066;">
+                    Please say YES and share your response with me on WhatsApp!
+                </p>
+            </div>
+            
+            <div class="photo-section">
+                <div class="photo-frame">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="photo-frame">
+                    <i class="fas fa-kiss-wink-heart"></i>
+                </div>
+                <div class="photo-frame">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            
+            <div class="valentine-question">Ayanda, will you be my Valentine?</div>
+            
+            <div class="buttons">
+                <button class="btn yes-btn" id="yesBtn">YES! Absolutely!</button>
+                <button class="btn no-btn" id="noBtn">Hmm, let me think...</button>
+            </div>
+            
+            <!-- Response Form -->
+            <div class="response-form" id="responseForm">
+                <div class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>Share Your Answer on WhatsApp</h3>
+                <p style="text-align: center; margin-bottom: 20px; color: #555;">
+                    Your response will be sent directly to my WhatsApp!
+                </p>
+                
+                <form id="whatsappForm">
+                    <div class="form-group">
+                        <label for="responseType">Your Answer:</label>
+                        <select id="responseType" name="responseType" required>
+                            <option value="" disabled selected>Select your answer</option>
+                            <option value="YES! I'd love to be your Valentine!">YES! I'd love to be your Valentine!</option>
+                            <option value="Yes, but I have conditions...">Yes, but I have conditions...</option>
+                            <option value="Maybe... convince me more!">Maybe... convince me more!</option>
+                            <option value="I need to think about it">I need to think about it</option>
+                            <option value="Let's talk about it first">Let's talk about it first</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Personal Message (optional):</label>
+                        <textarea id="message" name="message" placeholder="Add a personal message for me..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signature">Sign as:</label>
+                        <input type="text" id="signature" name="signature" value="Your Moochie, Ayanda" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fab fa-whatsapp"></i> Send to My Valentine
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Confirmation Message -->
+            <div class="confirmation-message" id="confirmationMessage">
+                <h2>Your Response Has Been Sent! 💖</h2>
+                <p>Thank you, my beautiful Moochie! I've received your Valentine's response on WhatsApp.</p>
+                <p>I'm so excited to celebrate Valentine's Day with you, my Onyenwem!</p>
+                <p>Check your WhatsApp for my reply!</p>
+                
+                <a href="https://wa.me/+1234567890?text=Hi%20my%20love,%20I%20just%20responded%20to%20your%20Valentine's%20proposal!" class="whatsapp-link" target="_blank" id="whatsappDirectLink">
+                    <i class="fab fa-whatsapp"></i> Open WhatsApp to Chat
+                </a>
+                
+                <p style="margin-top: 30px; font-size: 2rem;">💝 Forever Yours 💝</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Made with <i class="fas fa-heart heart-icon"></i> for Ayanda, my Moochie, my Onyenwem</p>
+            <p>Your response will be sent directly to my WhatsApp!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create floating hearts
+        const heartsContainer = document.getElementById('hearts-container');
+        const heartsCount = 50;
+        
+        for (let i = 0; i < heartsCount; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDelay = Math.random() * 5 + 's';
+            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            heart.style.opacity = Math.random() * 0.5 + 0.3;
+            heartsContainer.appendChild(heart);
+        }
+        
+        // Get DOM elements
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const responseForm = document.getElementById('responseForm');
+        const confirmationMessage = document.getElementById('confirmationMessage');
+        const whatsappForm = document.getElementById('whatsappForm');
+        const whatsappDirectLink = document.getElementById('whatsappDirectLink');
+        
+        // IMPORTANT: Replace this with YOUR actual phone number
+        // Format: country code + phone number (without +, 0, or spaces)
+        // Example: For US number +1 (555) 123-4567, use "15551234567"
+        const YOUR_PHONE_NUMBER = "27680779760"; // CHANGE THIS
+        
+        // Show response form when YES button is clicked
+        yesBtn.addEventListener('click', function() {
+            responseForm.style.display = 'block';
+            responseForm.scrollIntoView({ behavior: 'smooth' });
+            
+            // Create celebration effect
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    createCelebrationHeart();
+                }, i * 100);
+            }
+        });
+        
+        // Handle NO button (playful)
+        noBtn.addEventListener('click', function() {
+            // Move the no button randomly
+            const maxX = window.innerWidth - noBtn.offsetWidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+            
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+            
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = randomX + 'px';
+            noBtn.style.top = randomY + 'px';
+            
+            // Change text
+            const messages = [
+                "Are you sure?",
+                "Think again!",
+                "I'll be sad!",
+                "Pretty please?",
+                "Just say yes!",
+                "You know you want to!",
+                "Give me a chance!"
+            ];
+            
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            noBtn.textContent = randomMessage;
+            
+            // Make the YES button bigger
+            yesBtn.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                yesBtn.style.transform = 'scale(1)';
+            }, 300);
+            
+            // Still show the form even if she clicks NO
+            setTimeout(() => {
+                responseForm.style.display = 'block';
+                responseForm.scrollIntoView({ behavior: 'smooth' });
+            }, 1500);
+        });
+        
+        // Handle form submission
+        whatsappForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const responseType = document.getElementById('responseType').value;
+            const message = document.getElementById('message').value;
+            const signature = document.getElementById('signature').value;
+            
+            // Create the WhatsApp message
+            let whatsappMessage = `💌 VALENTINE'S RESPONSE 💌%0A%0A`;
+            whatsappMessage += `From: ${signature}%0A`;
+            whatsappMessage += `Response: ${responseType}%0A%0A`;
+            
+            if (message.trim() !== '') {
+                whatsappMessage += `Personal Message:%0A${message}%0A%0A`;
+            }
+            
+            whatsappMessage += `💝 I responded to your Valentine's proposal! 💝`;
+            
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${YOUR_PHONE_NUMBER}?text=${whatsappMessage}`;
+            
+            // Update the direct WhatsApp link
+            whatsappDirectLink.href = whatsappUrl;
+            
+            // Show confirmation message
+            responseForm.style.display = 'none';
+            confirmationMessage.style.display = 'block';
+            confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+            
+            // Create more celebration hearts
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    createCelebrationHeart();
+                }, i * 100);
+            }
+            
+            // Open WhatsApp in a new tab (optional - you can enable this if you want)
+            // window.open(whatsappUrl, '_blank');
+            
+            // Show alert with instructions
+            alert("Your response is ready to send! Click the 'Open WhatsApp to Chat' button to send it directly to me. Make sure WhatsApp is installed on your device!");
+        });
+        
+        // Function to create celebration hearts
+        function createCelebrationHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤';
+            heart.style.position = 'fixed';
+            heart.style.fontSize = (Math.random() * 30 + 20) + 'px';
+            heart.style.color = '#ff0066';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '100vh';
+            heart.style.zIndex = '9999';
+            heart.style.pointerEvents = 'none';
+            document.body.appendChild(heart);
+            
+            // Animate the heart
+            const animation = heart.animate([
+                { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                { transform: `translateY(-${window.innerHeight + 100}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+            ], {
+                duration: Math.random() * 2000 + 2000,
+                easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+            });
+            
+            animation.onfinish = () => {
+                heart.remove();
+            };
+        }
+        
+        // Add a click event to the nickname for a surprise
+        const nicknameElement = document.querySelector('.nickname');
+        nicknameElement.addEventListener('click', function() {
+            this.style.color = '#ff0066';
+            this.style.textShadow = '0 0 10px #ff99cc';
+            
+            setTimeout(() => {
+                this.style.color = '#cc0066';
+                this.style.textShadow = 'none';
+            }, 1000);
+        });
+        
+        // Alert for phone number setup
+        window.addEventListener('load', function() {
+            if (YOUR_PHONE_NUMBER === "27680779760") {
+                setTimeout(() => {
+                    alert("IMPORTANT: To make the WhatsApp feature work, you need to replace 'YOUR_PHONE_NUMBER_HERE' on line 330 with your actual phone number in international format (without +, 0, or spaces). Example: 15551234567");
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .heart {
+            position: absolute;
+            color: #ff4d8d;
+            font-size: 24px;
+            opacity: 0;
+            animation: float 8s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            color: #8a0035;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #b30046;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ayanda-name {
+            font-size: 4rem;
+            color: #ff0066;
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 0px #ffb3d9;
+        }
+        
+        .message-box {
+            background: linear-gradient(to right, #fff0f5, #ffe6f2);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 8px solid #ff4d8d;
+            box-shadow: 0 5px 15px rgba(255, 77, 141, 0.2);
+            max-width: 800px;
+        }
+        
+        .message-box p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            color: #ff0066;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+        
+        .nickname {
+            font-size: 2.2rem;
+            color: #cc0066;
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'Comic Sans MS', cursive;
+        }
+        
+        .valentine-question {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 40px 0;
+            color: #b30046;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 20px 50px;
+            font-size: 1.8rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .yes-btn {
             background: linear-gradient(to right, #ff0066, #ff4d8d);
             color: white;
         }
