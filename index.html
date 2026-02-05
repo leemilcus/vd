@@ -166,14 +166,14 @@
         }
         
         .yes-btn {
-            background: linear-gradient(to right, #25D366, #128C7E);
+            background: linear-gradient(to right, #ff0066, #ff4d8d);
             color: white;
         }
         
         .yes-btn:hover {
-            background: linear-gradient(to right, #128C7E, #25D366);
+            background: linear-gradient(to right, #ff4d8d, #ff0066);
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 10px 20px rgba(255, 0, 102, 0.3);
         }
         
         .no-btn {
@@ -186,97 +186,14 @@
             transform: translateY(-5px);
         }
         
-        .response-form {
+        .response-message {
             display: none;
-            width: 100%;
-            max-width: 600px;
-            margin: 30px 0;
+            text-align: center;
             padding: 30px;
-            background: linear-gradient(135deg, #dcf8c6, #fff);
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            border: 3px solid #25D366;
-        }
-        
-        .response-form h3 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #075E54;
-        }
-        
-        .whatsapp-icon {
-            display: block;
-            text-align: center;
-            font-size: 3rem;
-            color: #25D366;
-            margin-bottom: 15px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-            color: #075E54;
-            font-weight: bold;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.1rem;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            background-color: white;
-        }
-        
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #25D366;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 18px;
-            background: linear-gradient(to right, #25D366, #128C7E);
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-        }
-        
-        .submit-btn:hover {
-            background: linear-gradient(to right, #128C7E, #25D366);
-            transform: translateY(-3px);
-            box-shadow: 0 7px 15px rgba(37, 211, 102, 0.4);
-        }
-        
-        .confirmation-message {
-            display: none;
-            text-align: center;
-            padding: 40px;
-            background: linear-gradient(135deg, #dcf8c6, #fff);
+            background: linear-gradient(135deg, #ffb3d9, #ff80b3);
             border-radius: 15px;
             margin-top: 30px;
             animation: fadeIn 1s;
-            border: 3px solid #25D366;
         }
         
         @keyframes fadeIn {
@@ -284,62 +201,28 @@
             to { opacity: 1; }
         }
         
-        .confirmation-message h2 {
-            font-size: 2.8rem;
-            color: #075E54;
+        .response-message h2 {
+            font-size: 3rem;
+            color: #800033;
             margin-bottom: 20px;
         }
         
-        .confirmation-message p {
+        .response-message p {
             font-size: 1.5rem;
-            color: #128C7E;
-            margin-bottom: 20px;
+            color: #4d001f;
         }
         
-        .whatsapp-link {
-            display: inline-block;
+        .whatsapp-notice {
             background-color: #25D366;
             color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-        }
-        
-        .whatsapp-link:hover {
-            background-color: #128C7E;
-            transform: scale(1.05);
-        }
-        
-        .photo-section {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        
-        .photo-frame {
-            width: 200px;
-            height: 200px;
+            padding: 15px;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            background-color: #ffcce0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: #ff4d8d;
+            margin-top: 20px;
+            display: inline-block;
         }
         
-        .photo-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .whatsapp-notice i {
+            margin-right: 10px;
         }
         
         footer {
@@ -353,6 +236,63 @@
         .heart-icon {
             color: #ff0066;
             margin: 0 5px;
+        }
+        
+        .response-form {
+            display: none;
+            background: linear-gradient(to right, #fff0f5, #ffe6f2);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .response-form h3 {
+            font-size: 2rem;
+            color: #ff0066;
+            margin-bottom: 20px;
+        }
+        
+        .response-form textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            border: 2px solid #ff4d8d;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            resize: vertical;
+        }
+        
+        .send-btn {
+            background: linear-gradient(to right, #25D366, #128C7E);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .send-btn:hover {
+            background: linear-gradient(to right, #128C7E, #25D366);
+            transform: translateY(-3px);
+        }
+        
+        .confirmation {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #28a745;
         }
         
         @media (max-width: 768px) {
@@ -371,11 +311,6 @@
             .btn {
                 padding: 15px 30px;
                 font-size: 1.5rem;
-            }
-            
-            .photo-frame {
-                width: 150px;
-                height: 150px;
             }
             
             .response-form {
@@ -402,21 +337,6 @@
                 <p>From the moment you came into my life, everything has felt more beautiful, more meaningful, and more joyful. You are the light that brightens my darkest days and the warmth that fills my heart with happiness.</p>
                 <p>You are not just my girlfriend, you are my <span class="highlight">Moochie</span>, my <span class="highlight">Onyenwem</span> - my beautiful one. Every moment with you is a treasure, and every memory we create is priceless.</p>
                 <p>This Valentine's Day, I want to make it official. I want to celebrate this day of love with you, not just as any couple, but as <span class="highlight">Ayanda and her Valentine</span>.</p>
-                <p style="text-align: center; font-weight: bold; margin-top: 25px; color: #ff0066;">
-                    Please say YES and share your response with me on WhatsApp!
-                </p>
-            </div>
-            
-            <div class="photo-section">
-                <div class="photo-frame">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="photo-frame">
-                    <i class="fas fa-kiss-wink-heart"></i>
-                </div>
-                <div class="photo-frame">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
             </div>
             
             <div class="valentine-question">Ayanda, will you be my Valentine?</div>
@@ -426,63 +346,32 @@
                 <button class="btn no-btn" id="noBtn">Hmm, let me think...</button>
             </div>
             
-            <!-- Response Form -->
             <div class="response-form" id="responseForm">
-                <div class="whatsapp-icon">
-                    <i class="fab fa-whatsapp"></i>
+                <h3>Send Your Response to Me</h3>
+                <p>I'd love to hear your thoughts! Send me a message and I'll receive it on WhatsApp:</p>
+                <textarea id="responseText" placeholder="Type your message here... You can say yes, no, or anything you want me to know! 💖"></textarea>
+                <button class="send-btn" id="sendBtn">
+                    <i class="fab fa-whatsapp"></i> Send to WhatsApp
+                </button>
+                <div class="confirmation" id="confirmation">
+                    <i class="fas fa-check-circle"></i> Your response has been prepared! Click the WhatsApp button that appears to send it to me.
                 </div>
-                <h3>Share Your Answer on WhatsApp</h3>
-                <p style="text-align: center; margin-bottom: 20px; color: #555;">
-                    Your response will be sent directly to my WhatsApp!
-                </p>
-                
-                <form id="whatsappForm">
-                    <div class="form-group">
-                        <label for="responseType">Your Answer:</label>
-                        <select id="responseType" name="responseType" required>
-                            <option value="" disabled selected>Select your answer</option>
-                            <option value="YES! I'd love to be your Valentine!">YES! I'd love to be your Valentine!</option>
-                            <option value="Yes, but I have conditions...">Yes, but I have conditions...</option>
-                            <option value="Maybe... convince me more!">Maybe... convince me more!</option>
-                            <option value="I need to think about it">I need to think about it</option>
-                            <option value="Let's talk about it first">Let's talk about it first</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Personal Message (optional):</label>
-                        <textarea id="message" name="message" placeholder="Add a personal message for me..."></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="signature">Sign as:</label>
-                        <input type="text" id="signature" name="signature" value="Your Moochie, Ayanda" required>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">
-                        <i class="fab fa-whatsapp"></i> Send to My Valentine
-                    </button>
-                </form>
             </div>
             
-            <!-- Confirmation Message -->
-            <div class="confirmation-message" id="confirmationMessage">
-                <h2>Your Response Has Been Sent! 💖</h2>
-                <p>Thank you, my beautiful Moochie! I've received your Valentine's response on WhatsApp.</p>
-                <p>I'm so excited to celebrate Valentine's Day with you, my Onyenwem!</p>
-                <p>Check your WhatsApp for my reply!</p>
-                
-                <a href="https://wa.me/+1234567890?text=Hi%20my%20love,%20I%20just%20responded%20to%20your%20Valentine's%20proposal!" class="whatsapp-link" target="_blank" id="whatsappDirectLink">
-                    <i class="fab fa-whatsapp"></i> Open WhatsApp to Chat
-                </a>
-                
-                <p style="margin-top: 30px; font-size: 2rem;">💝 Forever Yours 💝</p>
+            <div class="response-message" id="responseMessage">
+                <h2>You've Made Me So Happy! 💖</h2>
+                <p>My wonderful Ayanda, I'm over the moon! I can't wait to make this Valentine's Day the most special one yet for my Moochie, my Onyenwem!</p>
+                <p>Get ready for a day filled with love, surprises, and beautiful memories. I love you more than words can express!</p>
+                <div class="whatsapp-notice">
+                    <i class="fab fa-whatsapp"></i> I'll send you WhatsApp details for our Valentine's date soon!
+                </div>
+                <p style="margin-top: 20px; font-size: 2rem;">💝 Forever Yours 💝</p>
             </div>
         </main>
         
         <footer>
             <p>Made with <i class="fas fa-heart heart-icon"></i> for Ayanda, my Moochie, my Onyenwem</p>
-            <p>Your response will be sent directly to my WhatsApp!</p>
+            <p>Happy Valentine's Day, my love!</p>
         </footer>
     </div>
 
@@ -506,26 +395,34 @@
         const yesBtn = document.getElementById('yesBtn');
         const noBtn = document.getElementById('noBtn');
         const responseForm = document.getElementById('responseForm');
-        const confirmationMessage = document.getElementById('confirmationMessage');
-        const whatsappForm = document.getElementById('whatsappForm');
-        const whatsappDirectLink = document.getElementById('whatsappDirectLink');
+        const responseMessage = document.getElementById('responseMessage');
+        const responseText = document.getElementById('responseText');
+        const sendBtn = document.getElementById('sendBtn');
+        const confirmation = document.getElementById('confirmation');
         
+        // Your WhatsApp number (encoded for security)
+        const yourWhatsAppNumber = "+27680779760";
         
-        // Show response form when YES button is clicked
+        // Handle YES button click
         yesBtn.addEventListener('click', function() {
             responseForm.style.display = 'block';
             responseForm.scrollIntoView({ behavior: 'smooth' });
+            responseText.value = "Yes! I will be your Valentine! 💖 I'm so excited to celebrate with you, my love!";
             
             // Create celebration effect
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 30; i++) {
                 setTimeout(() => {
                     createCelebrationHeart();
                 }, i * 100);
             }
         });
         
-        // Handle NO button (playful)
+        // Handle NO button click
         noBtn.addEventListener('click', function() {
+            responseForm.style.display = 'block';
+            responseForm.scrollIntoView({ behavior: 'smooth' });
+            responseText.value = "Hmm, let me think about it... 😉 Just kidding! Of course I'll be your Valentine!";
+            
             // Move the no button randomly
             const maxX = window.innerWidth - noBtn.offsetWidth;
             const maxY = window.innerHeight - noBtn.offsetHeight;
@@ -556,57 +453,58 @@
             setTimeout(() => {
                 yesBtn.style.transform = 'scale(1)';
             }, 300);
-            
-            // Still show the form even if she clicks NO
-            setTimeout(() => {
-                responseForm.style.display = 'block';
-                responseForm.scrollIntoView({ behavior: 'smooth' });
-            }, 1500);
         });
         
-        // Handle form submission
-        whatsappForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+        // Handle Send to WhatsApp button click
+        sendBtn.addEventListener('click', function() {
+            const message = responseText.value.trim();
             
-            // Get form values
-            const responseType = document.getElementById('responseType').value;
-            const message = document.getElementById('message').value;
-            const signature = document.getElementById('signature').value;
+            if (!message) {
+                alert("Please type a message before sending!");
+                return;
+            }
             
             // Create the WhatsApp message
-            let whatsappMessage = `💌 VALENTINE'S RESPONSE 💌%0A%0A`;
-            whatsappMessage += `From: ${signature}%0A`;
-            whatsappMessage += `Response: ${responseType}%0A%0A`;
+            const whatsappMessage = encodeURIComponent(`💌 VALENTINE'S RESPONSE FROM AYANDA 💌\n\n${message}\n\nSent from the Valentine's Day proposal website 💖`);
             
-            if (message.trim() !== '') {
-                whatsappMessage += `Personal Message:%0A${message}%0A%0A`;
+            // Create WhatsApp link
+            const whatsappLink = `https://wa.me/${yourWhatsAppNumber}?text=${whatsappMessage}`;
+            
+            // Show confirmation and create WhatsApp button
+            confirmation.style.display = 'block';
+            
+            // Create a direct WhatsApp button
+            const whatsappButton = document.createElement('a');
+            whatsappButton.href = whatsappLink;
+            whatsappButton.target = "_blank";
+            whatsappButton.className = "send-btn";
+            whatsappButton.innerHTML = '<i class="fab fa-whatsapp"></i> Open WhatsApp to Send';
+            whatsappButton.style.marginTop = "15px";
+            whatsappButton.style.display = "block";
+            whatsappButton.style.backgroundColor = "#25D366";
+            whatsappButton.style.backgroundImage = "linear-gradient(to right, #25D366, #128C7E)";
+            
+            // Add button to form
+            responseForm.appendChild(whatsappButton);
+            
+            // Also show the response message if it's a yes
+            if (message.toLowerCase().includes("yes") || message.toLowerCase().includes("of course")) {
+                setTimeout(() => {
+                    responseMessage.style.display = 'block';
+                    responseMessage.scrollIntoView({ behavior: 'smooth' });
+                }, 1000);
             }
             
-            whatsappMessage += `💝 I responded to your Valentine's proposal! 💝`;
+            // Track the response (in a real app, you might send to a server)
+            console.log("Response from Ayanda:", message);
+            console.log("WhatsApp link:", whatsappLink);
             
-            // Create WhatsApp URL
-            const whatsappUrl = `https://wa.me/${YOUR_PHONE_NUMBER}?text=${whatsappMessage}`;
-            
-            // Update the direct WhatsApp link
-            whatsappDirectLink.href = whatsappUrl;
-            
-            // Show confirmation message
-            responseForm.style.display = 'none';
-            confirmationMessage.style.display = 'block';
-            confirmationMessage.scrollIntoView({ behavior: 'smooth' });
-            
-            // Create more celebration hearts
-            for (let i = 0; i < 30; i++) {
+            // Create celebration hearts
+            for (let i = 0; i < 20; i++) {
                 setTimeout(() => {
                     createCelebrationHeart();
-                }, i * 100);
+                }, i * 150);
             }
-            
-            // Open WhatsApp in a new tab (optional - you can enable this if you want)
-            // window.open(whatsappUrl, '_blank');
-            
-            // Show alert with instructions
-            alert("Your response is ready to send! Click the 'Open WhatsApp to Chat' button to send it directly to me. Make sure WhatsApp is installed on your device!");
         });
         
         // Function to create celebration hearts
@@ -648,7 +546,18 @@
             }, 1000);
         });
         
-       
+        // Pre-fill message based on time of day
+        window.addEventListener('load', function() {
+            const hour = new Date().getHours();
+            let greeting = "";
+            
+            if (hour < 12) greeting = "Good morning";
+            else if (hour < 18) greeting = "Good afternoon";
+            else greeting = "Good evening";
+            
+            // Update the response text placeholder
+            responseText.placeholder = `${greeting} my love! Type your response here...`;
+        });
     </script>
 </body>
 </html>
